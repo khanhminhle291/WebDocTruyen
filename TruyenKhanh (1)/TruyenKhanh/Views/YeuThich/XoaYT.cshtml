@@ -1,0 +1,35 @@
+﻿@model TruyenKhanh.Models.TruyenYeuThich
+
+@{
+    ViewBag.Title = "XoaYT";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="header">
+    <img src="~/Content/Images/logo1.png" width="1200" height="300" />
+</div>
+<h2>Xóa yêu thích</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenYT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenYT)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+<div class="form-actions no-color">
+    <input type="submit" value="Delete" class="btn btn-default" /> |
+    @Html.ActionLink("Back to List", "Index", "Admin")
+</div>
+    }
+</div>

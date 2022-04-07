@@ -1,0 +1,308 @@
+﻿
+<body>
+    <header>
+        <div class="slideshow">
+            <div class="slider">
+                <div class="slider-imgs">
+                    <input type="radio" name="inputslider" id="img1" class="nut" />
+                    <input type="radio" name="inputslider" id="img2" class="nut" />
+                    <input type="radio" name="inputslider" id="img3" class="nut" />
+
+                    <img src="~/Content/images/Banner1.jpg" alt="img1" class="imgslider1" />
+                    <img src="~/Content/images/Banner2.jpg" alt="img2" class="imgslider2" />
+                    <img src="~/Content/images/banner3.jpg" alt="img3" class="imgslider3" />
+                </div>
+                <div class="labelslider">
+                    <label for="img1"></label>
+                    <label for="img2"></label>
+                    <label for="img3"></label>
+                </div>
+            </div>
+            <style src="Style.css">
+                * {
+                    box-sizing: border-box;
+                    margin: 0px;
+                    padding: 0px;
+                }
+
+                .slider {
+                    width: 100%;
+                    margin: 0 auto;
+                    overflow: hidden;
+                    padding-top: 0px;
+                }
+
+                .slider-imgs {
+                    display: flex;
+                }
+
+                    .slider-imgs img {
+                        width: 100%;
+                    }
+
+                    .slider-imgs input {
+                        display: none;
+                    }
+
+                .labelslider {
+                    display: flex;
+                    justify-content: center;
+                }
+
+                    .labelslider label {
+                        background-image: linear-gradient(135deg, #008aff, #86d472);
+                        border-radius: 10px;
+                        border: 1px solid blue;
+                        color: #ffffff;
+                        display: block;
+                        height: 15px;
+                        width: 70px;
+                        padding: 10px;
+                        position: relative;
+                        text-decoration: none;
+                        width: 70px;
+                        z-index: 2;
+                        margin: -25px 15px;
+                    }
+
+                        .labelslider label:hover {
+                            background: #00ff90;
+                        }
+
+                #img1:checked ~ .imgslider1 {
+                    margin-left: -100%
+                }
+
+                #img2:checked ~ .imgslider2 {
+                    margin-left: -200%
+                }
+
+                #img3:checked ~ .imgslider3 {
+                    margin-left: -300%
+                }
+            </style>
+        </div>
+        <div class="heading-bar">
+            <a href="#"><h1>DNT<span style="color: #F18121;">MANGA</span></h1></a>
+            <form action="#" class="search-box">
+                <input style="color: black;" type="text" placeholder="Nhập tên truyện cần tìm" required>
+                <button type="submit" class="search-icon" style="background-color: #F18121;"></button>
+            </form>
+            <div class="feature-cat">
+                <a href="#">Truyện  mới</a>
+                <a href="#"><b>Truyện Hay</b></a>
+                <a href="#">Truyện full</a>
+            </div>
+        </div>
+        <menu>
+            <ul class="menu-ul">
+                <li class="menu-li">@Html.ActionLink("List Truyện", "Truyen", "Admin")</li>
+                <li class="menu-li">@Html.ActionLink("Thể loại", "Index", "Loai")</li>
+                <li class="menu-li">@Html.ActionLink("Yêu Thích", "Index", "YeuThich")</li>
+                <li class="menu-li">@Html.ActionLink("Tác Gỉa", "Index", "TacGia")</li>
+                <li class="menu-li">@Html.ActionLink("Đăng ký", "DangKy", "NguoiDung")</li>
+                <li class="menu-li">@Html.ActionLink("Đăng nhập", "DangNhap", "NguoiDung")</li>
+            </ul>
+        </menu>
+    </header>
+
+
+
+    <section class="category" id="moi-cap-nhat">
+        <a href="#"><div class="fake-symbol" style="background-color: #FF2853;"></div><span class="cat-header">Truyện mới cập nhật</span></a>
+        <div class="thumbnail-container">
+            <div class="thumbnail intro-pop-trigger">
+                <img src="~/Content/Images/hinh1.jpg" style="background-color: #2C7ABE;" />
+                <div class="thumbnail-text">
+                    <a href="#"><h3>Hồn về trong gió</h3></a>
+                    <a href="#"><p>Chapter 123</p></a>
+                </div>
+                <div class="tag upload-time">
+                    <p>2 giờ trước</p>
+                </div>
+                <div class="thumbnail-intro-box intro-pop">
+                    <div class="arrow-container">
+                        <div class="arrow"></div>
+                    </div>
+                    <div class="thumbnail-intro-container">
+                        <div class="thumbnail-heading-text">
+                            <h2>Lorem ipsum</h2>
+                            <p>Tình trạng: Đang cập nhật</p>
+                            <p>Lượt xem: 123456</p>
+                            <p>Lượt theo dõi: 4321</p>
+                        </div>
+                        <div class="thumbnail-tag-container">
+                            <a href="#" class="tag thumbnail-tag">Truyện ma</a>
+                            <a href="#" class="tag thumbnail-tag">Truyện hay</a>
+                            <a href="#" class="tag thumbnail-tag">Truyện mới</a>
+                            <a href="#" class="tag thumbnail-tag">Truyện full,Truyện theo tháng</a>
+                        </div>
+                        <div class="thumbnail-intro-text">
+                            <p>Truyện ma đáng sợ.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="thumbnail intro-pop-trigger">
+                <img src="~/Content/Images/hinh2.jpg" style="background-color: #2C7ABE;" />
+                <div class="thumbnail-text">
+                    <a href="#"><h3>Oan hồn dưới giếng</h3></a>
+                    <a href="#"><p>Chapter 123</p></a>
+                </div>
+                <div class="tag upload-time">
+                    <p>2 giờ trước</p>
+                </div>
+                <div class="thumbnail-intro-box intro-pop">
+                    <div class="arrow-container">
+                        <div class="arrow"></div>
+                    </div>
+                    <div class="thumbnail-intro-container">
+                        <div class="thumbnail-heading-text">
+                            <h2>Lorem ipsum</h2>
+                            <p>Tình trạng: Đang cập nhật</p>
+                            <p>Lượt xem: 123456</p>
+                            <p>Lượt theo dõi: 4321</p>
+                        </div>
+                        <div class="thumbnail-tag-container">
+                            <a href="#" class="tag thumbnail-tag">Truyện ma</a>
+                            <a href="#" class="tag thumbnail-tag">Truyện hay</a>
+                            <a href="#" class="tag thumbnail-tag">Truyện mới</a>
+                            <a href="#" class="tag thumbnail-tag">Truyện full,Truyện theo tháng</a>
+                        </div>
+                        <div class="thumbnail-intro-text">
+                            <p>Truyện ma đáng sợ.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="thumbnail intro-pop-trigger">
+                <img src="~/Content/Images/hinh3.jpg" style="background-color: #2C7ABE;" />
+                <div class="thumbnail-text">
+                    <a href="#"><h3>Công chúa của anh</h3></a>
+                    <a href="#"><p>Chapter 123</p></a>
+                </div>
+                <div class="tag upload-time">
+                    <p>2 giờ trước</p>
+                </div>
+                <div class="thumbnail-intro-box intro-pop">
+                    <div class="arrow-container">
+                        <div class="arrow"></div>
+                    </div>
+                    <div class="thumbnail-intro-container">
+                        <div class="thumbnail-heading-text">
+                            <h2>Lorem ipsum</h2>
+                            <p>Tình trạng: Đang cập nhật</p>
+                            <p>Lượt xem: 123456</p>
+                            <p>Lượt theo dõi: 4321</p>
+                        </div>
+                        <div class="thumbnail-tag-container">
+                            <a href="#" class="tag thumbnail-tag">Truyện ngôn tình</a>
+                            <a href="#" class="tag thumbnail-tag">Truyện hay</a>
+                            <a href="#" class="tag thumbnail-tag">Truyện mới</a>
+                            <a href="#" class="tag thumbnail-tag">Truyện full,Truyện theo tháng</a>
+                        </div>
+                        <div class="thumbnail-intro-text">
+                            <p>Truyện ngôn tình mới hay nhất.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="thumbnail intro-pop-trigger">
+                <img src="~/Content/Images/hinh4.jpg" style="background-color: #2C7ABE;" />
+                <div class="thumbnail-text">
+                    <a href="#"><h3>Chuyện tình công chúa</h3></a>
+                    <a href="#"><p>Chapter 123</p></a>
+                </div>
+                <div class="tag upload-time">
+                    <p>2 giờ trước</p>
+                </div>
+                <div class="thumbnail-intro-box intro-pop">
+                    <div class="arrow-container">
+                        <div class="arrow"></div>
+                    </div>
+                    <div class="thumbnail-intro-container">
+                        <div class="thumbnail-heading-text">
+                            <h2>Lorem ipsum</h2>
+                            <p>Tình trạng: Đang cập nhật</p>
+                            <p>Lượt xem: 123456</p>
+                            <p>Lượt theo dõi: 4321</p>
+                        </div>
+                        <div class="thumbnail-tag-container">
+                            <a href="#" class="tag thumbnail-tag">Truyện ngôn tình</a>
+                            <a href="#" class="tag thumbnail-tag">Truyện hay</a>
+                            <a href="#" class="tag thumbnail-tag">Truyện mới</a>
+                            <a href="#" class="tag thumbnail-tag">Truyện full,Truyện theo tháng</a>
+                        </div>
+                        <div class="thumbnail-intro-text">
+                            <p>Truyện ngôn tình hay được săn đón nhiều nhất !</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="thumbnail intro-pop-trigger">
+                <img src="~/Content/Images/hinh5.jpg" style="background-color: #2C7ABE;" />
+                <div class="thumbnail-text">
+                    <a href="#"><h3>Ngôi mộ bên sông</h3></a>
+                    <a href="#"><p>Chapter 123</p></a>
+                </div>
+                <div class="tag upload-time">
+                    <p>2 giờ trước</p>
+                </div>
+                <div class="thumbnail-intro-box intro-pop">
+                    <div class="arrow-container">
+                        <div class="arrow"></div>
+                    </div>
+                    <div class="thumbnail-intro-container">
+                        <div class="thumbnail-heading-text">
+                            <h2>Lorem ipsum</h2>
+                            <p>Tình trạng: Đang cập nhật</p>
+                            <p>Lượt xem: 123456</p>
+                            <p>Lượt theo dõi: 4321</p>
+                        </div>
+                        <div class="thumbnail-tag-container">
+                            <a href="#" class="tag thumbnail-tag">Truyện ma</a>
+                            <a href="#" class="tag thumbnail-tag">Truyện hay</a>
+                            <a href="#" class="tag thumbnail-tag">Truyện mới</a>
+                            <a href="#" class="tag thumbnail-tag">Truyện full,Truyện theo tháng</a>
+                        </div>
+                        <div class="thumbnail-intro-text">
+                            <p>Truyện ma đáng sợ.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="thumbnail intro-pop-trigger">
+                <img src="~/Content/Images/hinh1.jpg" style="background-color: #2C7ABE;" />
+                <div class="thumbnail-text">
+                    <a href="#"><h3>Xác ai bên hồ</h3></a>
+                    <a href="#"><p>Chapter 123</p></a>
+                </div>
+                <div class="tag upload-time">
+                    <p>2 giờ trước</p>
+                </div>
+                <div class="thumbnail-intro-box intro-pop">
+                    <div class="arrow-container">
+                        <div class="arrow"></div>
+                    </div>
+                    <div class="thumbnail-intro-container">
+                        <div class="thumbnail-heading-text">
+                            <h2>Lorem ipsum</h2>
+                            <p>Tình trạng: Đang cập nhật</p>
+                            <p>Lượt xem: 123456</p>
+                            <p>Lượt theo dõi: 4321</p>
+                        </div>
+                        <div class="thumbnail-tag-container">
+                            <a href="#" class="tag thumbnail-tag">Truyện ma</a>
+                            <a href="#" class="tag thumbnail-tag">Truyện hay</a>
+                            <a href="#" class="tag thumbnail-tag">Truyện mới</a>
+                            <a href="#" class="tag thumbnail-tag">Truyện full,Truyện theo tháng</a>
+                        </div>
+                        <div class="thumbnail-intro-text">
+                            <p>Truyện ma đáng sợ.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+    </section>
+</body>

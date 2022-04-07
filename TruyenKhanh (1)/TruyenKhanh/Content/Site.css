@@ -1,0 +1,375 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #EBEBEB;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li {
+    list-style: none;
+}
+/* header, section, footer{
+    width: 80em;
+    margin: auto;
+    padding: 1em 0;
+} */
+
+header, footer {
+    background-color: white;
+}
+
+.heading-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 80em;
+    margin: auto;
+    padding: 1em 0;
+}
+
+    .heading-bar h1 {
+        text-transform: uppercase;
+    }
+
+.search-box {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+    .search-box input {
+        width: 100%;
+        padding: 1em 0;
+        padding: 1em 1em;
+        font-size: 1em;
+    }
+
+.search-icon {
+    width: 2em;
+    height: 2em;
+    cursor: pointer;
+    position: absolute;
+    right: 1em;
+}
+
+.feature-cat {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+}
+
+    .feature-cat a:hover {
+        color: #F18121;
+    }
+
+menu {
+    margin-top: 1em;
+    background-color: #2C7ABE;
+    text-transform: capitalize;
+}
+
+.menu-ul {
+    display: flex;
+    max-width: 80em;
+    margin: auto;
+}
+
+.menu-li > a {
+    color: white;
+    padding: 1em 2em;
+    display: block;
+}
+
+    .menu-li > a:hover {
+        background-color: #F18121;
+    }
+
+.droplist {
+    display: none;
+    z-index: 10;
+    padding: 1em 0;
+}
+
+    .droplist a {
+        display: block;
+        padding: 0.5em 1em;
+    }
+
+        .droplist a:hover {
+            color: #F18121;
+        }
+
+.droplist-fluid-container {
+    background-color: white;
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+
+.droplist-fluid {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    height: 20em;
+    width: 80em;
+    margin: auto;
+}
+
+.fake-img-droplist-fluid-container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.fake-img-droplist-fluid {
+    width: 12em;
+    height: 15em;
+    background-color: #EBEBEB;
+}
+
+.droplist-normal {
+    background-color: white;
+    position: absolute;
+    width: 15em;
+}
+
+/* hover pop-up */
+.dropdown:hover .droplist {
+    display: block;
+}
+
+
+
+
+section {
+    max-width: 80em;
+    margin: auto;
+    padding: 2em 0;
+}
+
+.fake-symbol {
+    width: 2em;
+    height: 2em;
+    margin-right: 1em;
+    display: inline-block;
+}
+
+.cat-header {
+    font-size: 2em;
+}
+
+#moi-cap-nhat .cat-header {
+    color: #FF2853;
+}
+
+#yeu-thich .cat-header {
+    color: #D580E0;
+}
+
+#truyen-full .cat-header {
+    color: #56CCFA;
+}
+
+.thumbnail-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.thumbnail {
+    width: 12em;
+    margin-top: 3em;
+    margin-right: 1em;
+    position: relative;
+}
+
+.fake-img {
+    width: 100%;
+    height: 15em;
+    border-radius: 8px;
+}
+
+.thumbnail-text {
+    margin-top: 1em;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+    .thumbnail-text h3 {
+        font-size: 1.2em;
+        font-weight: normal;
+        text-align: center;
+    }
+
+    .thumbnail-text p {
+        margin-top: 0.5em;
+    }
+
+    .thumbnail-text a:hover {
+        color: #F18121;
+    }
+
+.tag {
+    padding: 0.3em 0.5em;
+    background-color: #56CCFA;
+    width: max-content;
+    border-radius: 4px;
+    color: white;
+}
+
+.upload-time {
+    position: absolute;
+    top: 0.5em;
+    left: 0.5em;
+    z-index: 1;
+}
+
+.thumbnail-intro-box {
+    width: 150%;
+    z-index: 10;
+    padding-left: 1em;
+    box-shadow: 12px -12px 10px -15px black;
+    border-radius: 8px;
+    font-size: 0.9em;
+}
+
+.arrow-container {
+    width: 3em;
+    height: 3em;
+    /* background-color: black; */
+    overflow: hidden;
+    position: absolute;
+    top: 3em;
+    left: 0;
+    z-index: -1;
+}
+
+.arrow {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    transform: rotate(-45deg);
+    position: absolute;
+    left: 20%;
+}
+
+.thumbnail-intro-container {
+    background-color: white;
+    border-radius: 8px;
+    /* box-shadow: 0 -1em 2em -1.5em; */
+
+    font-size: 0.9em;
+    padding: 0.7em;
+}
+
+.thumbnail-container h2 {
+    font-size: 1.2em;
+    color: #F18121;
+    text-transform: capitalize;
+}
+
+.thumbnail-intro-text p {
+    overflow: auto;
+    /* white-space: nowrap; */
+    /* text-overflow: ellipsis; */
+    height: 4em;
+}
+
+.thumbnail-tag-container {
+    padding: 0.5em 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.thumbnail-tag {
+    margin: 0.1em;
+}
+
+    .thumbnail-tag:hover {
+        background-color: #F18121;
+    }
+
+
+.intro-pop {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(10%);
+    position: absolute;
+    top: 0;
+    left: 100%;
+    /* transition: all 0.3s; */
+
+    transition-duration: 0.3s;
+    transition-property: visibility, opacity, transform;
+}
+
+.intro-pop-trigger:hover .intro-pop {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.click-for-more {
+    margin-top: 3em;
+}
+
+    .click-for-more a {
+        display: block;
+        width: max-content;
+        margin: auto;
+        background-color: #F18121;
+        color: white;
+        padding: 1em 2em;
+        border-radius: 0.5em;
+        font-weight: bold;
+        font-size: 1.2em;
+        box-shadow: 0 -5px 10px -10px black;
+    }
+
+        .click-for-more a:hover {
+            background-color: #EEB686;
+        }
+
+
+
+.quick-link {
+    text-align: center;
+}
+
+    .quick-link a {
+        margin: 0 0.5em;
+    }
+
+        .quick-link a:last-child {
+            margin-right: 0;
+        }
+
+        .quick-link a:hover {
+            color: #F18121;
+        }
+
+.footer-container {
+    max-width: 80em;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 0;
+}
+
+.more-link a {
+    padding: 0 0.5em;
+    text-transform: capitalize;
+}
+
+    .more-link a:hover {
+        color: #F18121;
+    }

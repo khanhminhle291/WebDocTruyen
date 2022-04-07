@@ -1,0 +1,43 @@
+﻿@model IEnumerable<TruyenKhanh.Models.Truyen>
+
+@{
+    ViewBag.Title = "ListTruyen";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="header">
+    <img src="~/Content/Images/logo1.png"width="1200" height="300" />
+</div>
+<h2>Danh sách truyện hệ thống</h2>
+
+<table class="table">
+    <tr>
+
+        <th> Tên Truyện</th>
+        <th> Mô Tả </th>
+        <th> Hình Ảnh</th>
+        <th> Số Chương</th>
+        <th>Tùy Chọn</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>@Html.DisplayFor(modelItem => item.TenTruyen)</td>
+            <td>@Html.DisplayFor(modelItem => item.Mota)</td>
+            <td><img src="@item.Hinh" width="150" height="200" alt="" />
+            <td>@Html.DisplayFor(modelItem => item.SoChuong)</td>
+
+            <td>
+                @Html.ActionLink("Nhấp để đọc", "Detail", new { id = item.MaTruyen })
+
+            </td>
+        </tr>
+    }
+</table>
+<div>
+    <h3 style="text-align:center"><a href="@Url.Action("Index", "Home")" style="background-color:orange; color: black">Về trang chủ</a></h3>
+</div>
+
+
+
+

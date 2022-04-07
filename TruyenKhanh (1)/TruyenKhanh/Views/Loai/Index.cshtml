@@ -1,0 +1,36 @@
+﻿@model IEnumerable<TruyenKhanh.Models.TheLoai>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="header">
+    <img src="~/Content/Images/logo1.png" width="1200" height="300" />
+</div>
+<h2>Thể loại</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>Thể loại</th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenTL)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MaTL }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MaTL }) |
+            @Html.ActionLink("Delete", "Xoaloai", new { id=item.MaTL })
+        </td>
+    </tr>
+}
+</table>
+<div>
+    <h3 style="text-align:center"><a href="@Url.Action("Index", "Home")" style="background-color:orange; color: black">Về trang chủ</a></h3>
+</div>

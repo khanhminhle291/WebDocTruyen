@@ -1,0 +1,36 @@
+﻿@model IEnumerable<TruyenKhanh.Models.TacGia>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="header">
+    <img src="~/Content/Images/logo1.png" width="1200" height="300" />
+</div>
+<h2>Tác giả hệ thống </h2>
+
+<p>
+    @Html.ActionLink("Thêm tác giả", "ThemTacGia")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TenTG)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenTG)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MaTG }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MaTG })
+        </td>
+    </tr>
+}
+
+</table>
+

@@ -1,0 +1,89 @@
+﻿@model TruyenKhanh.Models.NguoiDung
+
+@{
+    ViewBag.Title = "DangKy";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="header">
+    <img src="~/Content/Images/logo1.png" width="1200" height="300" />
+</div>
+<table align="center">
+    <h1 style="text-align:center;background-color:#f3f3f3;padding:10px;color:orangered">Đăng ký tài khoản người dùng  </h1>
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true)
+        <tr style="height: 40px; background-color: white">
+            <td>Tên đăng nhập :</td>
+            <td>
+                <span style="color:red;font-style:italic;background-color:white">
+                    @Html.TextBox("TenDangNhap")@ViewData["Loi2"]
+                </span>
+            </td>
+        </tr>
+        <tr style="height: 40px; background-color: white">
+            <td>Mật khẩu :</td>
+            <td>
+                <span style="color: red; font-style: italic; background-color: white">
+                    @Html.Password("MatKhau")@ViewData["Loi3"]
+                </span>
+            </td>
+        </tr>
+        <tr style="height: 40px; background-color: white">
+            <td>Mật khẩu nhập lại :</td>
+            <td>
+                <span style="color: red; font-style: italic; background-color: white">
+                    @Html.Password("Matkhaunhaplai")@ViewData["Loi4"]
+                </span>
+            </td>
+        </tr>
+        <tr style="height: 40px; background-color: white">
+            <td>Họ tên người dùng:</td>
+            <td>
+                <span style="color: red; font-style: italic; background-color: white">
+                    @Html.TextBox("HoTenND")@ViewData["Loi1"]
+                </span>
+            </td>
+        </tr>
+        <tr style="height: 40px; background-color: white">
+            <td>Địa chỉ:</td>
+            <td>
+                <span style="color: red; font-style: italic; background-color: white">
+                    @Html.TextBox("Diachi")@ViewData["Loi6"]
+                </span>
+            </td>
+        </tr>
+        <tr style="height: 40px; background-color: white">
+            <td>Email :</td>
+            <td>
+                <span style="color: red; font-style: italic; background-color: white">
+                    @Html.TextBox("Email")@ViewData["Loi5"]
+                </span>
+            </td>
+        </tr>
+
+        <tr style="height: 40px; background-color: white">
+            <td>Điện thoại :</td>
+            <td>
+                <span style="color: red; font-style: italic; background-color: white">
+                    @Html.TextBox("DT")@ViewData["Loi7"]
+                </span>
+            </td>
+        </tr>
+
+
+        <tr style="height: 40px; background-color: white">
+            <td></td>
+            <td>
+                <a href="@Url.Action("Dangnhap","NguoiDung")" />
+                <input type="submit" value="Đăng ký " />
+            </td>
+        </tr>
+    }
+</table>
+<div>
+    <h3 style="text-align: center; background-color: white">Nếu đã có tài khoản , vui lòng <a href="@Url.Action("Dangnhap","NguoiDung")">đăng nhập!!! </a></h3>
+</div>
+<div>
+    <h3 style="text-align:center"><a href="@Url.Action("Index", "Home")" style="background-color:orange; color: black">Đọc mà không đăng nhập</a></h3>
+</div>
